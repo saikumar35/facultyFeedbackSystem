@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -8,18 +8,19 @@ function App() {
     // Implement admin login logic here
   };
 
+  const [loginId, setId] = useState('')
+  const [password, setPassword] = useState('')
+
   const handleStudentLogin = (e) => {
     e.preventDefault();
     alert('Student login logic here');
-    // Implement student login logic here
+    
   };
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Faculty Feedback System Of 
-          <br/>
-          PARUL UNIVERSITY</h1>
+        <h1>Welcome to College Portal</h1>
       </header>
       <div className="login-container">
         <div className="login-box">
@@ -34,8 +35,8 @@ function App() {
         <div className="login-box">
           <h2>Student Login</h2>
           <form onSubmit={handleStudentLogin}>
-            <input type="text" placeholder="Student ID" required />
-            <input type="password" placeholder="Password" required />
+            <input type="text" placeholder="Student ID" required onChange={e=> setId(e.target.value)}/>
+            <input type="password" placeholder="Password" required onChange={e=> setPassword(e.target.value)}/>
             <button type="submit">Login as Student</button>
           </form>
         </div>

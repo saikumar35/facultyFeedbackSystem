@@ -26,6 +26,8 @@
   width: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+  opacity: 85%;
+  
 }
 
 .login-box h2 {
