@@ -8,13 +8,11 @@ function App() {
     // Implement admin login logic here
   };
 
-  const [loginId, setId] = useState('')
-  const [password, setPassword] = useState('')
+
 
   const handleStudentLogin = (e) => {
     e.preventDefault();
     alert('Student login logic here');
-    
   };
 
   return (
@@ -35,8 +33,8 @@ function App() {
         <div className="login-box">
           <h2>Student Login</h2>
           <form onSubmit={handleStudentLogin}>
-            <input type="text" placeholder="Student ID" required onChange={e=> setId(e.target.value)}/>
-            <input type="password" placeholder="Password" required onChange={e=> setPassword(e.target.value)}/>
+            <input type="text" placeholder="Student ID" required />
+            <input type="password" placeholder="Password" required/>
             <button type="submit">Login as Student</button>
           </form>
         </div>
