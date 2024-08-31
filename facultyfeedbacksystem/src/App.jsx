@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import {useNavigate} from 'react-router-dom';
 function App() {
+  const navigate=useNavigate();
+
   const handleAdminLogin = (e) => {
     e.preventDefault();
-    alert('Admin login logic here');
+    navigate('/admin-dashboard');
     // Implement admin login logic here
   };
+
+  const handleStudentLogin = (e) => {
+    e.preventDefault();
+    navigate('/student-dashboard')
 
 
 
   const handleStudentLogin = (e) => {
     e.preventDefault();
     alert('Student login logic here');
+
   };
 
   return (
@@ -34,7 +41,11 @@ function App() {
           <h2>Student Login</h2>
           <form onSubmit={handleStudentLogin}>
             <input type="text" placeholder="Student ID" required />
+
+            <input type="password" placeholder="Password" required />
+
             <input type="password" placeholder="Password" required/>
+
             <button type="submit">Login as Student</button>
           </form>
         </div>
