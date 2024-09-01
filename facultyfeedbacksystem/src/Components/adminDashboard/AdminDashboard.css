@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+.body{
+    font-family: poppins,sans-serif;
+    background-image: url(../../Assests/background-image.jpg);
+    background-size: cover;
+    background-position: center;
+    font-weight: 100;
+}
+/* header */
+header{
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 20px 10px 20px;
+    background-color: aliceblue;
+    box-shadow: 3px 3px 20px black;
+}
+header img{
+    width: 350px;
+}
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div img{
+    width: 30px;
+    height: 30px;
+}
+header div h3{
+    margin-left:5px ;
+}
+/* nav */
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:10px 20px 10px 20px;
+    background-color: aliceblue;
+    margin-top: 20px;
+}
+
+nav div select{
+    height: 25px;
+    width: 200px;
+    margin: 10px;
+    background-color: grey;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+nav button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+
+}
+/* main body */
+.main_body{
+    display: flex;
+    justify-content: space-between;
+
+}
+.recent_feedback{
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    width: 30%;
+}
+.recent_feedback form{
+    background-color: rgba(255, 255, 255,0.7);
+    width: 95%;
+    margin: 5px auto 5px auto;
+    padding: 5px;
+    color: black;
+    transition: 0.6s;
+    transform: scale(0.9);
+}
+.recent_feedback form:hover{
+    background-color: white;
+    transition: 0.6s;
+    transform: scale(1);
+}
+.recent_feedback form h4{
+    color: red;
+}
+.recent_feedback form button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    margin-right: 0;
+    position: relative;
+    
+}
+.recent_feedback form span{
+    display: flex;
+    justify-content: flex-end;
+}
+.recent_feedback p{
+    text-align: center;
+}
+.recent_feedback span{
+    display: flex;
+    justify-content: flex-end;
+}
+.recent_feedback a{
+    color: white;
+    text-decoration: none;
+    
+}
+.new_fb_btn button{
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: #dc3545;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.give_feedback{
+    width: 70%;
+}
