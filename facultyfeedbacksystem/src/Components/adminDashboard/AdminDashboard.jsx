@@ -38,10 +38,7 @@ const AdminDashboard = () =>{
                         nihil nesciunt doloribus illum veniam.... </p>
                         <span><button>Open</button></span>
                     </form>
-                    <span><a href="#">See More....</a></span>
-                    
-                    
-                    
+                    <span><a href="#">See More....</a></span>    
                 </div>
                 <div className="give_feedback">
                     <div className='new_fb_btn'>

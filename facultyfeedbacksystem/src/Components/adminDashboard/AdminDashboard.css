@@ -37,7 +37,7 @@ nav{
     align-items: center;
     padding:10px 20px 10px 20px;
     background-color: aliceblue;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 nav div select{
@@ -66,8 +66,8 @@ nav button{
 
 }
 .recent_feedback{
-    background-color: rgba(0,0,0,0.8);
-    color: white;
+    background-color: rgb(202, 226, 248);
+    color: black;
     width: 30%;
 }
 .recent_feedback form{
@@ -111,7 +111,7 @@ nav button{
     justify-content: flex-end;
 }
 .recent_feedback a{
-    color: white;
+    color: black;
     text-decoration: none;
     
 }
