@@ -25,6 +25,26 @@ const FeedbackSchema = new mongoose.Schema({
 
 const LoginDetails = mongoose.model('LoginDetails', FeedbackSchema);
 
+const fbSchema = new mongoose.Schema({
+    feedback:{
+        type: String,
+        required:true
+    },
+    semester:{
+        type: String,
+        required: true,
+    },
+    division:{
+        type:String,
+        required:true
+    },
+    faculty:{
+        type:String,
+        required:true
+    },
+    
+}, {collection:'feedback_student'});
+const feedback_student= mongoose.model("feedback_student",fbSchema)
 //api routes
 app.post('/api/login',async (req,res)=>{
     const {username,password}=req.body;
@@ -37,8 +57,26 @@ app.post('/api/login',async (req,res)=>{
             return res.status(401).json({message: 'Invalid credentials'});
         }
     }catch(err){
-        console.error('Error during login: '.err.message);
+        console.error('Error during login: ',err.message);
         res.status(500).json({message: 'server error'});
+    }
+});
+
+
+app.post('/feedback',async(req,res)=>{
+    const{feedback,semester,division,faculty}=req.body;
+    console.log('recieved feedback: ',req.body);
+    if (!feedback) {    
+        console.error('No feedback provided');
+        return res.status(400).json({ message: "No feedback provided" });
+    }
+    try {
+        const newfb = new feedback_student({feedback,semester,division,faculty});
+        await newfb.save();
+        res.status(201).json({message: "feedback successfully submitted"});
+
+    } catch (err) {
+        res.status(500).json({message: "failed to submit feedback",error:err});
     }
 });
 
